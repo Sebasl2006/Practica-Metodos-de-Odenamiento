@@ -57,5 +57,28 @@ public class View {
 
     }
 
+
+     public boolean inputBoolean(String mensaje) {
+        System.out.print(mensaje);
+        while (true) {
+            if (scanner.hasNextBoolean()) {
+                return scanner.nextBoolean();
+            } else {
+                scanner.next(); 
+                System.out.print("Entrada inválida. Ingresar true o false: ");
+            }
+        }
+    }
+
+public boolean inputOrdenAD(String mensaje) {
+    System.out.print(mensaje);
+    while (true) {
+        String input = scanner.next().trim().toUpperCase();
+        if (input.equals("A")) return true;
+        if (input.equals("D")) return false;
+        System.out.print("Entrada inválida. Ingresar A o D: ");
+    }
+}
+
     
 }
